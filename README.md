@@ -1,7 +1,41 @@
 # UserAPI
 
 UML:
-![image](https://github.com/user-attachments/assets/5a8135a3-bc60-4a7b-ab91-acd12b15192b)
+```mermaid
+classDiagram
+    class UserAPI {
+      +addUser()
+      +activateUser()
+      +deactivateUser()
+      +viewUsers()
+    }
+    
+    class User {
+      -userId: int
+      -username: string
+      -email: string
+      -password: string
+      -status: boolean
+      -createdAt: datetime
+      -updatedAt: datetime
+      -lastLogin: datetime
+    }
+    
+    UserAPI --> User : manages
+```
+
 
 ERD:
-![image](https://github.com/user-attachments/assets/59092f7d-2cc8-4e45-ae39-264830f68c3f)
+```mermaid
+erDiagram
+    USER {
+      int user_id PK
+      string username "unique"
+      string email "unique"
+      string password
+      boolean status
+      datetime created_at
+      datetime updated_at
+      datetime last_login
+    }
+```
