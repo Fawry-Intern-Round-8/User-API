@@ -4,10 +4,12 @@ UML:
 ```mermaid
 classDiagram
     class UserAPI {
-      +addUser()
-      +activateUser()
-      +deactivateUser()
-      +viewUsers()
+      +addUser(user: User)
+      +getUser(id: int): User
+      +activateUser(id: int)
+      +deactivateUser(id: int)
+      +viewUsers(): List~User~
+      +deleteUser(id: int)
     }
     
     class User {
