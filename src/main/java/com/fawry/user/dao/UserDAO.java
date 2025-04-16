@@ -1,10 +1,10 @@
-package com.fawry.User_API.service;
+package com.fawry.user.dao;
 
-import com.fawry.User_API.entity.Users;
+import com.fawry.user.entity.Users;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserDAO {
     Users saveUser(Users user);
 
     Users getUser(int id);

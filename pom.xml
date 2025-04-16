@@ -6,13 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.fawry</groupId>
-	<artifactId>User-API</artifactId>
+	<artifactId>user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>User-API</name>
-	<description>User API microservice for Fawry Intern Project</description>
+	<name>user-service</name>
 	<url/>
 	<licenses>
 		<license/>

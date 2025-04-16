@@ -1,7 +1,7 @@
-package com.fawry.User_API.rest;
+package com.fawry.user.rest;
 
-import com.fawry.User_API.entity.Users;
-import com.fawry.User_API.service.UserService;
+import com.fawry.user.entity.Users;
+import com.fawry.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

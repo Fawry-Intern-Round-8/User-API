@@ -1,4 +1,4 @@
-package com.fawry.User_API;
+package com.fawry.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

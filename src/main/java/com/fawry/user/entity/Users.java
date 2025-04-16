@@ -1,4 +1,4 @@
-package com.fawry.User_API.entity;
+package com.fawry.user.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;

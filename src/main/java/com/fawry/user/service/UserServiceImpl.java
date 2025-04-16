@@ -1,7 +1,7 @@
-package com.fawry.User_API.service;
+package com.fawry.user.service;
 
-import com.fawry.User_API.dao.UserDAO;
-import com.fawry.User_API.entity.Users;
+import com.fawry.user.dao.UserDAO;
+import com.fawry.user.entity.Users;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,7 @@
-package com.fawry.User_API.dao;
+package com.fawry.user.dao;
 
-import com.fawry.User_API.entity.Users;
+import com.fawry.user.entity.Users;
 import jakarta.persistence.EntityManager;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
