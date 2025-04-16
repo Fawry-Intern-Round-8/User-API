@@ -39,6 +39,12 @@ public class UserRestController {
         return userService.saveUser(user);
     }
 
+    @PutMapping("/users/{userId}")
+    public Users updateUserById(@PathVariable int userId, @RequestBody Users user) {
+        user.setId(userId);
+        return userService.saveUser(user);
+    }
+
     @PutMapping("/users/{userId}/activate")
     public void activateUser(@PathVariable int userId) {
         userService.activateUser(userId);
