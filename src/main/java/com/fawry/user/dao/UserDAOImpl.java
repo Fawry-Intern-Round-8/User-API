@@ -3,6 +3,7 @@ package com.fawry.user.dao;
 import com.fawry.user.entity.Users;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.List;
 @Repository
 public class UserDAOImpl implements UserDAO {
     private final EntityManager entityManager;
+
+
 
     @Autowired
     public UserDAOImpl(EntityManager entityManager) {
@@ -40,5 +43,17 @@ public class UserDAOImpl implements UserDAO {
 
     public void deleteUser(int id) {
         entityManager.remove(entityManager.find(Users.class, id));
+    }
+
+    @Override
+    public Users findByUsername(String username) {
+        try {
+            return entityManager.createQuery(
+                            "SELECT u FROM Users u WHERE u.username = :username", Users.class)
+                    .setParameter("username", username)
+                    .getSingleResult();
+        } catch (Exception e) {
+            throw new RuntimeException("User does not exist");
+        }
     }
 }

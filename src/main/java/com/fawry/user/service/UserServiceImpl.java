@@ -12,6 +12,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     private final UserDAO userDAO;
 
+
     @Autowired
     public UserServiceImpl(UserDAO userDAO) {
         this.userDAO = userDAO;
@@ -49,5 +50,10 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void deleteUser(int id) {
         userDAO.deleteUser(id);
+    }
+
+    @Override
+    public Users findByUsername(String username) {
+        return userDAO.findByUsername(username);
     }
 }

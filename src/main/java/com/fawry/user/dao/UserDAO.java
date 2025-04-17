@@ -16,4 +16,6 @@ public interface UserDAO {
     void deactivateUser(int id);
 
     void deleteUser(int id);
+    Users findByUsername(String username);
+
 }
